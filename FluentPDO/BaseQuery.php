@@ -116,8 +116,10 @@ abstract class BaseQuery implements IteratorAggregate {
 		$time = microtime(true);
 		if ($result && $result->execute($parameters)) {
 			$this->time = microtime(true) - $time;
-		} else {
+		} elseif (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] == 'production') {
 			$result = false;
+		} else {
+			throw new \Exception($result->errorInfo()[2], 1);
 		}
 
 		$this->result = $result;
