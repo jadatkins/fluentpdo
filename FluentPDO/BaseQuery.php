@@ -120,7 +120,7 @@ abstract class BaseQuery implements IteratorAggregate {
 			if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] == 'production') {
 				$result = false;
 			} else {
-				throw new \Exception($result->errorInfo()[2], 1);
+				throw new \Exception($result->errorInfo()[2]);
 			}
 		}
 
