@@ -1,4 +1,4 @@
-# FluentPDO [![Build Status](https://secure.travis-ci.org/lichtner/fluentpdo.png?branch=master)](http://travis-ci.org/lichtner/fluentpdo)
+# FluentPDO [![Build Status](https://secure.travis-ci.org/envms/fluentpdo.png?branch=master)](http://travis-ci.org/envms/fluentpdo) [![Code Climate](https://codeclimate.com/github/fpdo/fluentpdo/badges/gpa.svg)](https://codeclimate.com/github/fpdo/fluentpdo)
 
 FluentPDO - smart SQL builder for PHP.
 
@@ -12,7 +12,7 @@ FluentPDO is small PHP library for rapid query building. Killer feature is "Smar
 - Build SELECT, INSERT, UPDATE & DELETE queries
 - Small and fast
 - Type hinting with code completion in smart IDEs
-- Requires PHP 5.1+ with any database supported by PDO
+- Requires PHP 5.3+ with any database supported by PDO
 
 ## Reference
 
@@ -22,13 +22,13 @@ FluentPDO is small PHP library for rapid query building. Killer feature is "Smar
 
 ### Composer
 
-The preferred way to install FluentPDO is via [composer](http://getcomposer.org/).
+The preferred way to install FluentPDO is via [composer](http://getcomposer.org/). v1.1.x will be the last until the release of 2.0, so we recommend using 1.1.* to ensure no breaking changes are introduced.
 
 Add in your `composer.json`:
 
 	"require": {
 		...
-		"lichtner/fluentpdo": "dev-master"	
+		"fpdo/fluentpdo": "1.1.*"
 	}
 
 then update your dependencies with `composer update`.
@@ -139,7 +139,7 @@ $query = $fpdo->deleteFrom('article', 1)->execute();
 
 *Note: INSERT, UPDATE and DELETE will be executed after `->execute()`:*
 
-Full documentation can be found on the [FluentPDO homepage](http://lichtner.github.io/fluentpdo/)
+Full documentation can be found on the [FluentPDO homepage](http://fpdo.github.io/fluentpdo/)
 
 ## Licence
 
